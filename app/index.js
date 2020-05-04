@@ -43,4 +43,4 @@ function updateCountTasks(tasks: Array<Task>): void {
   }
 }
 
-console.log(foo(4, 42));
+console.log(foo(4, 4));
