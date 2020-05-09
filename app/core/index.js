@@ -15,7 +15,7 @@ const Element = (config: ElementConfig) => (cls: any) => {
    }
 
    const template = makeTemplate(config);
-   const connectedCallback = cls.prototype.connectedCallback || function () {};
+   const connectedCallback = cls.prototype.init || function () {};
 
    cls.prototype.connectedCallback = function() {
       const clone = document.importNode(template.content, true);
@@ -24,6 +24,7 @@ const Element = (config: ElementConfig) => (cls: any) => {
       } else {
          this.appendChild(clone);
       }
+
       connectedCallback.call(this);
    };
 
