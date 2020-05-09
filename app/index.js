@@ -1,6 +1,7 @@
 // @flow
 
-import { foo } from '@tools/tool';
+import { MyName } from './components/custom';
+import { MyName2 } from './components/custom2';
 
 type Task = {
   id: number,
@@ -42,5 +43,3 @@ function updateCountTasks(tasks: Array<Task>): void {
     tasksCount.innerText = tasks.length.toString();
   }
 }
-
-console.log(foo(4, 4));
