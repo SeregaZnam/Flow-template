@@ -1,4 +1,6 @@
-import { Element } from '../core';
+import { Element } from '../../core';
+import Template from './template.html';
+import Styles from './styles.css';
 
 type Task = {
   id: number,
@@ -7,22 +9,8 @@ type Task = {
 
 @Element({
   selector: 'todo-form',
-  template: `
-   <form class="task">
-      <input type="text" class="task__input">
-      <button type="submit">Add task</button>
-   </form>
-   <div class="task-count"></div>
-   <div class="task-list">
-      <ul class="task-list__items">
-      </ul>
-   </div>`,
-  style: `{
-      background: #009cff;     
-      padding: 16px;         
-      border-top: 1px solid black;
-      font-size: 24px;
-    }`,
+  template: Template,
+  style: Styles,
   useShadow: false
 })
 export class TodoForm extends HTMLElement {

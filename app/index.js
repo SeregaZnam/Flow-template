@@ -1,3 +1,3 @@
 // @flow
 
-import { TodoForm } from './components/TodoForm';
+import { TodoForm } from './components/TodoForm/TodoForm';
